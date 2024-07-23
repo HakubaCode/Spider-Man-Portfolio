@@ -42,15 +42,6 @@ This project involves creating a superhero-themed web portfolio for public use, 
 - **Main Content**: Centered content with styled hero section, interactive buttons, and project thumbnails.
 - **Footer**: Simple and clean footer with copyright information.
 - **Responsive Design**: Media queries to ensure the layout adapts across various screen sizes.
-
-## CSS Effects 🎬
-These animations and effects are implemented using CSS keyframes and transitions, ensuring a smooth and engaging user experience. The animations include:
-
-- **Swing Effect**: Applied to the profile picture to give it a swinging motion on hover.
-- **Fade-In Effect**: Used for the name and title to create a smooth appearance as the page loads.
-- **Lift Effect**: Adds a subtle lift to project thumbnails on hover, making them appear interactive and clickable.
-
-
 ## JavaScript Explanation 📝
 
 - **Theme Toggle**: Script to switch between light and dark themes, storing the user's preference in local storage.
@@ -74,9 +65,6 @@ The Spider-Man Portfolio project is an excellent exercise in web development, co
 2. Open the `index.html` file in your browser.
 3. Explore the code in your favorite text editor to see how it's built.
 
-
-
-
 ## Contributing 🤝
 
 Feel free to download this web portfolio and make it your own. Have fun!
@@ -85,3 +73,4 @@ Feel free to download this web portfolio and make it your own. Have fun!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seandesilva)
 [![Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@hakuba)
+
