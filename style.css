@@ -1,0 +1,493 @@
+/* Define global variables for both light and dark themes */
+/* CSS variables are like containers for storing values that can be reused throughout the stylesheet */
+:root {
+  /* Light Theme */ 
+  --primary-font: "Poppins", sans-serif; /* Main font for the site */
+  --primary-bg-color: #ffffff; /* Main background color */
+  --primary-text-color: #000000; /* Main text color */
+  --secondary-color: #575757; /* Secondary text color */
+  --btn-bg-color: #df1f2d; /* Button background color */
+  --cta-hover-color: #df1f2d; /* Button hover color */
+  --btn-bg-light: #eeeeee; /* Light button background color */
+  --skills-btn-bg: #ffffff; /* Skills button background color */
+  --skills-btn-color: var(--secondary-color); /* Skills button text color */
+
+  /* Dark Theme */
+  /* These variables will be used when dark theme is active */
+  --dark-primary-bg-color: #111111;
+  --dark-primary-text-color: #ffffff;
+  --dark-secondary-color: #ffffff;
+  --dark-btn-bg-color: #df1f2d;
+  --dark-cta-hover-color: #0d5e8c;
+  --dark-btn-bg-light: #eeeeee;
+  --dark-skills-btn-bg: #447bbe;
+  --dark-skills-btn-color: #ffffff;
+}
+
+/* Apply dark theme colors when the .dark-theme class is present */
+/* This changes the color scheme when dark mode is activated */
+.dark-theme {
+  --primary-bg-color: var(--dark-primary-bg-color);
+  --primary-text-color: var(--dark-primary-text-color);
+  --secondary-color: var(--dark-secondary-color);
+  --btn-bg-color: var(--dark-btn-bg-color);
+  --cta-hover-color: var(--dark-cta-hover-color);
+  --btn-bg-light: var(--dark-btn-bg-light);
+  --skills-btn-bg: var(--dark-skills-btn-bg);
+  --skills-btn-color: var(--dark-skills-btn-color);
+}
+
+/* General styling for the body element */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: var(--primary-font, "Arial, sans-serif"); /* Set the font */
+  background-color: var(--primary-bg-color); /* Set background color */
+  color: var(--primary-text-color); /* Set text color */
+}
+
+/* Style for the theme toggle button */
+.theme-btn {
+  position: relative; /* Position relative to its normal position */
+  left: 8.5rem; /* Move 8.5rem from the left */
+}
+
+/* Ensure headings and paragraphs have no margin and default cursor */
+h1, h2, h3, p {
+  margin: 0; /* Remove default margins */
+  cursor: default; /* Set cursor to default */
+}
+
+/* Apply flex display to several sections for layout */
+/* Flex is a powerful layout tool that helps in creating flexible responsive layouts */
+article, footer, .hero, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg, .portfolio, .skills {
+  display: flex;
+}
+
+/* Define the layout direction for specific sections */
+.hero, .portfolio, .skills {
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Center-align children for specific sections */
+.hero, .btn-bg, .portfolio, .skills {
+  align-items: center; /* Center items horizontally */
+}
+
+/* Center text for specific sections */
+.hero, .experience, .wrapper {
+  text-align: center; /* Center the text */
+}
+
+/* Add space between elements in specific sections */
+article, .hero, .logo-container, .portfolio, .skills {
+  gap: 1rem; /* Add 1rem space between flex items */
+}
+
+/* Style for the hero profile picture container */
+.hero-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+}
+
+/* Inner circle border effect for hero profile picture */
+.inner-circle {
+  content: "";
+  position: absolute; /* Position absolutely within .hero-pic */
+  top: 0.1rem;
+  left: 0.1rem;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  border-radius: 50%;
+  border: 0.18rem solid var(--primary-bg-color);
+  z-index: 1; /* Place it above the image */
+}
+
+/* Ensure images inside the hero profile picture and wrappers scale correctly */
+.hero-pic img, .wrapper img {
+  width: 100%; /* Make image fill its container */
+}
+
+.hero-pic img {
+  height: 100%;
+  object-fit: cover; /* Cover the container, cropping if necessary */
+  object-position: top 0.4rem right -1.3rem; /* Position the image */
+  transform: scale(1.9); /* Enlarge the image */
+}
+
+/* Set font weights for hero info headings */
+.hero-info h1, h2 {
+  font-weight: 400; /* Set font weight to normal */
+}
+
+/* Style paragraphs and subheadings within the hero info section */
+article p, .hero-info h2 {
+  color: var(--secondary-color); /* Use secondary color for text */
+}
+
+.hero-info h2 {
+  font-size: 1rem;
+  margin: 0 0 1rem 0; /* Add bottom margin */
+}
+
+/* Center content and space out elements in the footer and various sections */
+footer, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Size and spacing adjustments for theme toggle button and logos */
+.theme-btn, .logo-container a, .logo-container img {
+  height: 1.5rem;
+}
+
+/* Style for experience section */
+.experience {
+  margin: auto;
+  margin-top: 1.4rem;
+  max-width: 20rem;
+}
+
+.experience b {
+  font-weight: 500; /* Set font weight to medium */
+}
+
+.experience h2 {
+  width: 30%;
+  font-weight: 300; /* Set font weight to light */
+  font-size: 0.9rem;
+}
+
+/* Style call-to-action (CTA) section and its spacing */
+.cta {
+  margin-top: 1.2rem;
+}
+
+.cta, .btn-bg {
+  gap: 2rem; /* Add space between items */
+}
+
+/* Style for buttons and button-like elements */
+.btn, .btn-2, .btn-bg {
+  border-radius: 0.7rem; /* Round the corners */
+  border: none; /* Remove border */
+}
+
+.btn, .btn-2, .btn-bg, .wrapper h3 {
+  font-weight: 600; /* Set font weight to semi-bold */
+}
+
+/* Apply transitions for hover and active states */
+/* Transitions make changes smooth instead of abrupt */
+.btn, .btn-2, .btn-bg, .wrapper, .project-wrapper {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change background color on hover for download button */
+.download-btn:hover {
+  background-color: #447bbe
+}
+
+/* Change cursor style and add hover effects for interactive elements */
+.theme-btn, .download-btn:hover, .contact-btn:hover, .btn-2:hover, .wrapper img:hover {
+  cursor: pointer; /* Change cursor to hand pointer */
+}
+
+.btn:hover, .btn-2:hover, .project-wrapper:hover, .logo-container a:hover {
+  transform: scale(0.98); /* Slightly shrink on hover */
+}
+
+.btn:active, .btn-2:active, .project-wrapper:active, .logo-container a:active {
+  transform: scale(1); /* Return to original size when clicked */
+}
+
+/* Style for contact and download buttons on hover */
+.contact-btn:hover, .download-btn {
+  background-color: var(--btn-bg-color);
+  color: white;
+}
+
+.contact-btn:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style for secondary buttons on hover */
+.btn-2:hover, .active-btn {
+  background-color: #447bbe;
+  color: white;
+}
+
+/* Define button sizes */
+.btn, .btn-2 {
+  height: 3rem;
+}
+
+.btn {
+  width: 9rem;
+}
+
+.btn-2 {
+  width: 8.5rem;
+}
+
+.download-btn {
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the portfolio and skills sections */
+.portfolio-skills {
+  height: 4rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.btn-bg, .wrapper {
+  width: 20rem;
+}
+
+/* Background color for button-like elements and paragraphs */
+article p, .btn-bg {
+  background-color: var(--btn-bg-light);
+}
+
+/* Add top margin to major sections */
+.hero, .portfolio, .skills {
+  margin-top: 2rem;
+}
+
+.skills {
+  display: block; /* Change display to block for skills section */
+}
+
+/* Style the wrapper within skills section */
+.skills .wrapper {
+  max-width: 1000px;
+  margin: 0 auto; /* Center the wrapper */
+  padding: 20px;
+  width: auto;
+}
+
+/* Style for skills section heading */
+.skills h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #447bbe;
+  text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.1); /* Add subtle text shadow */
+}
+
+/* Layout for all skills section */
+.all-skills {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  justify-content: center;
+  gap: 15px; /* Add space between skill items */
+}
+
+/* Styling for each skill item */
+.all-skills p {
+  background-color: var(--skills-btn-bg);
+  color: var(--skills-btn-color);
+  padding: 8px 16px;
+  border-radius: 20px; /* Make buttons pill-shaped */
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin: 0;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.all-skills a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.all-skills a p {
+  background-color: var(--skills-btn-bg);
+  color: var(--skills-btn-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin: 0;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.all-skills a p:hover {
+  background-color: var(--btn-bg-color);
+  color: white;
+  transform: translateY(-3px); /* Move button up slightly on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  border-color: transparent;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .all-skills a p {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Hover effect for skill items */
+.all-skills p:hover {
+  background-color: var(--btn-bg-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+/* Style for images within wrappers */
+.wrapper img {
+  border-radius: 1rem; /* Round the corners of images */
+}
+
+/* Margin adjustments for articles and headings */
+article, .wrapper h3 {
+  margin-bottom: 1.5rem;
+}
+
+article {
+  flex-wrap: wrap; /* Allow article content to wrap */
+}
+
+article p {
+  border-radius: 0.5rem;
+  flex-grow: 20; /* Allow paragraphs to grow and take up space */
+  padding: 1rem;
+}
+
+/* Margin for the footer section */
+footer {
+  margin: 3rem 0;
+}
+
+/* Responsive design for larger screens */
+@media screen and (min-width: 900px) {
+  .skills, .portfolio {
+    flex-direction: row;
+    width: 45rem;
+  }
+  .skills {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+  }
+  .portfolio {
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrapper {
+    width: calc(48%); /* Set width to roughly half minus gap */
+    flex: none;
+  }
+  .skills .wrapper {
+    width: 100%;
+  }
+}
+
+/* Additional responsive design for small screens */
+@media (max-width: 768px) {
+  .all-skills p {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+}
+/* Add these to your existing CSS file */
+
+   @keyframes swing {
+     0% { transform: rotate(0deg); }
+     10% { transform: rotate(10deg); }
+     30% { transform: rotate(-10deg); }
+     50% { transform: rotate(5deg); }
+     70% { transform: rotate(-5deg); }
+     100% { transform: rotate(0deg); }
+   }
+
+   .hero-pic:hover {
+     animation: swing 1s ease;
+   }
+
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+
+   .hero-info h1, .hero-info h2 {
+     opacity: 0;
+     animation: fadeInUp 0.5s ease forwards;
+   }
+
+   .hero-info h1 {
+     animation-delay: 0.2s;
+   }
+
+   .hero-info h2 {
+     animation-delay: 0.4s;
+   }
+/* Add these to your existing CSS file */
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  70% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero-pic:hover {
+  animation: swing 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-info h1, .hero-info h2 {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.hero-info h1 {
+  animation-delay: 0.2s;
+}
+
+.hero-info h2 {
+  animation-delay: 0.4s;
+}
+
+.project-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.project-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+   .project-wrapper {
+     transition: transform 0.3s ease;
+   }
+
+   .project-wrapper:hover {
+     transform: translateY(-5px);
+   }
+
+   
