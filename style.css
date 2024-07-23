@@ -435,7 +435,7 @@ footer {
    .hero-info h2 {
      animation-delay: 0.4s;
    }
-/* Add these to your existing CSS file */
+/* Final Animations Swing, Fade */
 
 @keyframes swing {
   0% { transform: rotate(0deg); }
