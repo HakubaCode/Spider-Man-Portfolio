@@ -62,8 +62,8 @@ The Spider-Man Portfolio project is an excellent exercise in web development, co
 ## Getting Started 
 
 1. Clone this repository.
-2. Open the `index.html` file in your browser.
-3. Explore the code in your favorite text editor to see how it's built.
+2. Open the folder in your code editor.
+3. Explore the code, and add your own features to it.
 
 ## Contributing 🤝
 
