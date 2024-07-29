@@ -1,4 +1,4 @@
-<h1><a href="https://spider-man-portfolio-hakubacode.netlify.app/">Spider-Man Portfolio</a>🕸️</h1>
+<h1><a href="https://spider-man-portfolio-hakuba.netlify.app/">Spider-Man Portfolio</a>🕸️</h1>
 
 ## Project Description 📝
 
